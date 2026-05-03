@@ -12,8 +12,8 @@ class AnnotationsPlugin(InterfaceActionBase):
     name                = 'Annotations'
     description         = 'Import annotations'
     supported_platforms = ['linux', 'osx', 'windows']
-    author              = 'David Forrester'
-    version             = (1, 17, 13)
+    author              = 'David Forrester, Teresa de Morgan, other volunteers at MobileRead'
+    version             = (1, 17, 14)
     minimum_calibre_version = (1, 0, 0)
 
     actual_plugin       = 'calibre_plugins.annotations.action:AnnotationsAction'
