@@ -32,8 +32,6 @@ COLOR_MAP = {
                    'Red': {'bg': 'red', 'fg': 'black'},
              'Underline': {'bg': 'transparent', 'fg': 'blue'},
                 'Yellow': {'bg': '#f4e681', 'fg': 'black'},
-                  'Cyan': {'bg': '#baffe7', 'fg': 'black'},
-               'Magenta': {'bg': '#ffbcf6', 'fg': 'black'},
             }
 
 ANNOTATION_DIV_STYLE = "margin:0 0 0.5em 0"
@@ -96,7 +94,7 @@ class Annotations(Annotation, Logger):
             key = self._timestamp_to_datestr(annotation.timestamp)
             MONTHS = [None, 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
                             'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-            if not re.match('\d{2} \w{3} \d{4} \d{2}:\d{2}:\d{2}', key):
+            if not re.match(r'\d{2} \w{3} \d{4} \d{2}:\d{2}:\d{2}', key):
                 return "!%s" % key
             sts_elems = key[1:-1].split(' ')
             year = sts_elems[2]
